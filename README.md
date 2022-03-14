@@ -48,6 +48,8 @@ module.exports = function(eleventyConfig) {
 
 ### NPM Setup
 
+This repository's `package.json` file was initialized using `npm init -y`.
+
 11ty does not automatically clean the output folder before building so any deleted source files will need to be deleted from the output folder.  One easy way to take care of this is to just delete the entire output folder before building. This can be done using a shortcut script built into the `package.json` file.
 
 Here are some shortcut scripts that have already been added in this repo:
