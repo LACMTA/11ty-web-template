@@ -44,6 +44,10 @@ module.exports = function(eleventyConfig) {
 }
 ```
 
+### 11ty Ignored Files
+
+The `.eleventyignore` works like other ignore files.  The `README.md` file is added here so that 11ty does not try to build the README into a page.
+
 ## Notes
 
 ### NPM Setup
