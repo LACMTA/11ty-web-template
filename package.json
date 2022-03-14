@@ -1,0 +1,25 @@
+{
+  "name": "11ty-web-template",
+  "version": "1.0.0",
+  "description": "Use this template for quick prototypes and simple websites.  This template uses the [Eleventy (11ty) static site generator](https://www.11ty.dev/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf docs",
+    "build": "npx @11ty/eleventy",
+    "clean:build": "npm run clean && npm run build",
+    "serve": "npx @11ty/eleventy --serve",
+    "debug": "DEBUG=* npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LACMTA/11ty-web-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LACMTA/11ty-web-template/issues"
+  },
+  "homepage": "https://github.com/LACMTA/11ty-web-template#readme"
+}
