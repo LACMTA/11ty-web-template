@@ -26,7 +26,7 @@ Open `http://localhost:8080/` to see the site.
 
 ### 11ty Config File
 
-The `.eleventy.js` config file needs the following two settings for basic GitHub Pages publishing:
+The `.eleventy.js` config file needs the following two settings for GitHub Pages publishing:
 
 1. Change the output directory from the default `_site/` to the directory used by GitHub Pages: `docs/`.
 2. Add a path prefix with the repository name because 11ty builds links using the root as the default, but GitHub Pages without a custom domain follow the format `account.github.io/repository-name/`.
