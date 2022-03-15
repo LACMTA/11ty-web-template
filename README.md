@@ -8,23 +8,24 @@ Use `node --version` to verify you're running Node 12 or newer.
 
 Download this repository.
 
-Run this command to build the site:
+Run this command to build serve the site:
 
 ``` bash
-npx @11ty/eleventy
+npm run start
 ```
 
-Run this command to start the web server:
+Open `http://localhost:8080/` to view the site.
 
-``` bash
-npx @11ty/eleventy --serve
-```
+### Config
 
-Open `http://localhost:8080/` to see the site.
+Update the following files for each new project:
+
+- `.eleventy.js` - update `pathPrefix`
+- `src/_includes/default.liquid` - update `siteTitle`
 
 ## Publish Using GitHub Pages
 
-### 11ty Config File
+### 11ty Config
 
 The `.eleventy.js` config file needs the following two settings for GitHub Pages publishing:
 
@@ -68,14 +69,14 @@ Scripts can be chained together like this:
 ``` js
 "clean": "rm -rf docs",
 "build": "npx @11ty/eleventy",
-"clean:build": "npm run clean && npm run build"
+"clean:build": "npm run clean && npm run build",
+"start": "npm run clean && npm run build && npm run serve"
 ```
 
-Use the following commands to run these scripts:
+Use the following command to get started:
 
 ``` bash
-npm run clean:build
-npm run serve
+npm run start
 ```
 
 ### Liquid Templates
