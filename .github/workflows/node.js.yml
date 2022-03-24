@@ -1,0 +1,36 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 12.x
+        cache: 'npm'
+    - name: Build Site
+      run: npm run clean:build
+    - name: Copy CNAME to docs/
+      run: cp CNAME docs/
+    - name: List files
+      run: ls -lR
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "matikin9"
+        git config --global user.email "matikin9@gmail.com"
+        git add .
+        git commit -am 'Auto clean and build site'
+        git push -f
