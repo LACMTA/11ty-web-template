@@ -14,6 +14,8 @@ Run this command to build serve the site:
 npm run start
 ```
 
+❗❗❗ If this is your first time, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
+
 Open `http://localhost:8080/` to view the site.
 
 ### Config
