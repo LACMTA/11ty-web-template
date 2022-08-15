@@ -69,7 +69,7 @@ Here are some shortcut scripts that have already been added in this repo:
 Scripts can be chained together like this:
 
 ``` js
-"clean": "rm -rf docs",
+"clean": "npx rimraf docs",
 "build": "npx @11ty/eleventy",
 "clean:build": "npm run clean && npm run build",
 "start": "npm run clean && npm run build && npm run serve"
