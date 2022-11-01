@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:serve": "NODE_ENV=dev npm run clean:serve",
+    "dev:build": "NODE_ENV=dev npm run clean:build",
+    "prod:build": "NODE_ENV=prod npm run clean:build",
     "clean": "npx rimraf docs",
     "build": "npx @11ty/eleventy",
     "clean:build": "npm run clean && npm run build",
@@ -24,6 +27,10 @@
   },
   "homepage": "https://github.com/LACMTA/11ty-web-template#readme",
   "dependencies": {
-    "@uswds/uswds": "^3.2.0"
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "@uswds/compile": "^1.0.0-beta.3",
+    "uswds": "^2.13.3"
   }
 }

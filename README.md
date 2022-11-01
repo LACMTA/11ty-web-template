@@ -47,6 +47,58 @@ The `.eleventyignore` works like other ignore files.  The `README.md` file is ad
 
 This template uses the [USWDS](https://designsystem.digital.gov/).
 
+Install the USWDS source code package:
+
+``` bash
+npm install uswds --save-dev
+```
+
+Install USWDS compiler:
+
+``` bash
+npm install @uswds/compile --save-dev
+```
+
+Create `gulpfile.js` and add the compile settings:
+
+``` js
+const uswds = require('@uswds/compile');
+
+uswds.paths.dist.theme = './_theme';
+  
+exports.init = uswds.init;
+exports.compile = uswds.compile;
+exports.watch = uswds.watch;
+```
+
+Initialize the USWDS installation with gulp, copying the asset files out of the `node_modules` directory, combining them with your theme files, and then exporting them to the project directories specified in the gulpfile.
+
+``` bash
+npx gulp init
+```
+
+After the script runs, you should have new USWDS assets in an ./assets/uswds directory, theme files in a ./_theme directory, and compiled CSS in the ./assets/uswds/css directory.
+
+Project-specific styles go in the `assets/css/styles.scss` file.
+
+Import that file into `_theme/_uswds-theme-custom-styles.scss`:
+
+``` scss
+@import "../assets/css/styles.scss";
+```
+
+The gulpfile needs to point to it to watch for changes:
+
+``` js
+uswds.paths.src.projectSass = './assets/css';
+```
+
+To recompile the CSS every time there are changes to the project Sass, run:
+
+``` bash
+npx gulp watch
+```
+
 ## Notes
 
 ### NPM Setup
