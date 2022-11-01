@@ -4,12 +4,34 @@
 {% include 'head' %}
 
 <body>
-	{% include 'header' %}
-  
-	{{ content }}
-	</main>
+	<div class="container-outer display-flex flex-column">
+		{% include 'header' %}
+
+		<div class="flex-1 display-flex flex-column">
+			{{ content }}
+		</div>
+		{% include 'footer' %}
+	</div>
 
 	<script src="https://lacmta.github.io/design-system/dist/js/uswds.min.js"></script>
-	<script src="js/{{ js }}"></script>
+	{% for file in js-footer %}
+		<script src="{{ file | url }}"></script>
+	{% endfor %}
+
+	<!-- Google Translate -->
+	<script src="{{ '/js/translate.js' | url }}"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en',
+				includedLanguages: 'en,es,zh-CN,zh-TW,ko,vi,ja,ru,hy',
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+				autoDisplay: false,
+				gaTrack: true,
+				gaId: 'UA-10002990-1',
+			}, 'google_translate_element');
+		}
+	</script>
+
 </body>
 </html>

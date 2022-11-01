@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/LACMTA/11ty-web-template/issues"
   },
-  "homepage": "https://github.com/LACMTA/11ty-web-template#readme"
+  "homepage": "https://github.com/LACMTA/11ty-web-template#readme",
+  "dependencies": {
+    "@uswds/uswds": "^3.2.0"
+  }
 }

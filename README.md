@@ -23,7 +23,7 @@ Open `http://localhost:8080/` to view the site.
 Update the following files for each new project:
 
 - `.eleventy.js` - update `pathPrefix`
-- `src/_includes/default.liquid` - update `siteTitle`
+- `src/_includes/default.liquid` - update `title`
 
 ## Configuration
 
@@ -42,6 +42,10 @@ Use the `url` filter when creating relative links so that 11ty builds paths with
 ### 11ty Ignored Files
 
 The `.eleventyignore` works like other ignore files.  The `README.md` file is added here so that 11ty does not try to build the README into a page.
+
+## Design System
+
+This template uses the [USWDS](https://designsystem.digital.gov/).
 
 ## Notes
 

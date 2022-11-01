@@ -12,14 +12,13 @@
 
 
 	
-		<script src="site.js"></script>
-	
 
 	<title>11ty web template</title>
 </head>
 
 <body>
-	<header class="usa-header usa-header--basic">
+	<div class="container-outer display-flex flex-column">
+		<header class="usa-header usa-header--basic">
 	<div class="nav-container">
 		<div class="navbar">
 			<div class="logo" id="-logo">
@@ -45,30 +44,87 @@
 		</nav>
 	</div>
 </header>
-  
-	
+
+		<div class="flex-1 display-flex flex-column">
+			
 <div class="usa-section">
 	<div class="grid-container">
-	  <div class="grid-row grid-gap">
-		<main class="
-			usa-layout-docs__main
-			desktop:grid-col-12
-			usa-prose usa-layout-docs
-		  " id="main-content">
-		  <h1>11ty web template</h1>
+	  	<div class="grid-row grid-gap">
+			<main class="
+				usa-layout-docs__main
+				desktop:grid-col-12
+				usa-prose usa-layout-docs
+			" id="main-content">
+			<h1>11ty web template</h1>
 
-		  <p class="usa-intro">
-			Text here.
-		  </p>
+			<p class="usa-intro">
+				Text here.
+			</p>
 
-		</main>
-	  </div>
+			</main>
+	  	</div>
 	</div>
-  </div>
+</div>
 
-	</main>
+		</div>
+		<footer class="usa-footer">
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="usa-footer__logo grid-row tablet:grid-col-5 tablet:grid-gap-2">
+          <div class="grid-col-4 tablet:grid-col-12">
+            <img src="/11ty-web-template/img/metro_logo_white.svg" role="img" alt="Metro logo"/>
+          </div>
+          <div class="usa-footer__social-links grid-col-8 tablet:grid-col-12 grid-row grid-gap-1 display-flex flex-row flex-justify-end tablet:flex-justify-start">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://twitter.com/metrolosangeles"><img class="usa-social-link__icon" src="https://lacmta.github.io/metro-iconography/SocialContact_icon_twitter_b-on-w.svg" alt="Twitter"/></a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.facebook.com/losangelesmetro"><img class="usa-social-link__icon" src="https://lacmta.github.io/metro-iconography/SocialContact_icon_facebook_b-on-w.svg" alt="Facebook"/></a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.instagram.com/metrolosangeles/"><img class="usa-social-link__icon" src="https://lacmta.github.io/metro-iconography/SocialContact_icon_instagram_b-on-w.svg" alt="Instagram"/></a>
+            </div>
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="https://www.linkedin.com/company/los-angeles-county-metropolitan-transportation-authority/"><img class="usa-social-link__icon" src="https://lacmta.github.io/metro-iconography/SocialContact_icon_linkedin_b-on-w.svg" alt="LinkedIn"/></a>
+            </div>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links tablet:grid-col-7">
+
+          <div class="margin-y-3 grid-row display-flex flex-row flex-justify-end grid-gap-2">
+            <a href="#" class="grid-col-auto">FAQs</a>
+            <a href="#" class="grid-col-auto">Contact Us</a>
+          </div>
+          <div>
+            Designed by Metro - This website was designed and developed by a multicultural team working to make Metro's digital experience more equitable, accessible and easy to use.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+	</div>
 
 	<script src="https://lacmta.github.io/design-system/dist/js/uswds.min.js"></script>
-	<script src="js/"></script>
+	
+		<script src="site.js"></script>
+	
+
+	<!-- Google Translate -->
+	<script src="/11ty-web-template/js/translate.js"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en',
+				includedLanguages: 'en,es,zh-CN,zh-TW,ko,vi,ja,ru,hy',
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+				autoDisplay: false,
+				gaTrack: true,
+				gaId: 'UA-10002990-1',
+			}, 'google_translate_element');
+		}
+	</script>
+
 </body>
 </html>
