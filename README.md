@@ -6,9 +6,14 @@ Use this template for quick prototypes and simple websites.  This template uses 
 
 Use `node --version` to verify you're running Node 12 or newer.
 
-Download this repository.
+Fork or use this template repository to create a new project.
 
-Run this command to build serve the site:
+Set up the configuration for you project:
+
+- `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
+- `src/_includes/default.liquid` - update `title` for your project
+
+Run this command to build and serve the site:
 
 ``` bash
 npm run start
@@ -17,13 +22,6 @@ npm run start
 ❗❗❗ If this is your first time, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
 
 Open `http://localhost:8080/` to view the site.
-
-### Config
-
-Update the following files for each new project:
-
-- `.eleventy.js` - update `pathPrefix`
-- `src/_includes/default.liquid` - update `title`
 
 ## Configuration
 
