@@ -29,6 +29,10 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm install --silent
+    - name: Install uswds-uswds
+      run: npm install @uswds/uswds
+    - name: Install uswds-compile
+      run: npm install @uswds/compile
     - name: Compile USWDS
       run: npx gulp compile
     - name: Build Site
