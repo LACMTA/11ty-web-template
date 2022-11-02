@@ -13,30 +13,35 @@ Use this template for quick prototypes and simple websites.  This template uses 
     - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
     - `src/_includes/default.liquid` - update `title` for your project
 
-4. Install `uswds` and `uswds-compiler`:
+4. Install `uswds`:
 
     ``` bash
     npm install uswds --save-dev
+    ```
+
+5. Install `uswds-compiler`:
+
+    ``` bash
     npm install @uswds/compile --save-dev
     ```
 
-5. Start the gulp process and have it watch for changes to recompile the styles:
+6. Start the gulp process and have it watch for changes to recompile the styles:
 
     ``` bash
     npx gulp watch
     ```
 
-6. Build and serve the site (will automatically reload when files change):
+7. Build and serve the site (will automatically reload when files change):
 
     ``` bash
     npm run start
     ```
 
-    ❗❗❗ If this is your first time, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
+    ❗❗❗ If this is your first time using 11ty, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
 
-7. Open `http://localhost:8080/` to view the site.
+8. Open `http://localhost:8080/` to view the site.
 
-8. Turn on GitHub Pages by selecting to deploy from the `main` branch `/docs` folder.
+9. Turn on GitHub Pages by selecting to deploy from the `main` branch `/docs` folder.
 
 ## Configuration
 
@@ -55,6 +60,10 @@ Use the `url` filter when creating relative links so that 11ty builds paths with
 ### 11ty Ignored Files
 
 The `.eleventyignore` works like other ignore files.  The `README.md` file is added here so that 11ty does not try to build the README into a page.
+
+### Styles
+
+The `_theme/_uswds-theme-custom-styles.scss` file is set up to import the `assets/css/styles.scss` file. If site styling becomes more complicated, you may want to expand the structure.
 
 ## Design System
 
