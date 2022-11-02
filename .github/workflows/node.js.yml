@@ -28,7 +28,7 @@ jobs:
         node-version: 12.x
         cache: 'npm'
     - name: Install dependencies
-      run: npm install --silent
+      run: npm install
     - name: Install uswds-uswds
       run: npm install @uswds/uswds
     - name: Install uswds-compile
