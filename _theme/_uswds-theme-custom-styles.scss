@@ -19,4 +19,5 @@ i.e.
 @include u-padding-right('05');
 ----------------------------------------
 */
-@import "../assets/css/styles.scss";
+
+@use "uswds-core" as *;

@@ -16,7 +16,7 @@ Use this template for quick prototypes and simple websites.  This template uses 
 4. Install `uswds`:
 
     ``` bash
-    npm install uswds --save-dev
+    npm install @uswds/uswds --save-dev
     ```
 
 5. Install `uswds-compiler`:
@@ -101,15 +101,13 @@ npx gulp init
 
 After the script runs, you should have new USWDS assets in an ./assets/uswds directory, theme files in a ./_theme directory, and compiled CSS in the ./assets/uswds/css directory.
 
-Project-specific styles go in the `assets/css/styles.scss` file.
-
-Import that file into `_theme/_uswds-theme-custom-styles.scss`:
+Create a `styles.scss` file in the `assets/css/` directory and import that file into `_theme/_uswds-theme-custom-styles.scss`:
 
 ``` scss
 @import "../assets/css/styles.scss";
 ```
 
-The gulpfile needs to point to it to watch for changes:
+Use this file for customizations to the USWDS.  The gulpfile needs to point to it to watch for changes:
 
 ``` js
 uswds.paths.src.projectSass = './assets/css';
