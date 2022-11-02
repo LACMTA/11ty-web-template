@@ -32,9 +32,11 @@ Use this template for quick prototypes and simple websites.  This template uses 
     npm run start
     ```
 
-❗❗❗ If this is your first time, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
+    ❗❗❗ If this is your first time, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
 
-Open `http://localhost:8080/` to view the site.
+7. Open `http://localhost:8080/` to view the site.
+
+8. Turn on GitHub Pages by selecting to deploy from the `main` branch `/docs` folder.
 
 ## Configuration
 
