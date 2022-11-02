@@ -4,20 +4,33 @@ Use this template for quick prototypes and simple websites.  This template uses 
 
 ## Quickstart
 
-Use `node --version` to verify you're running Node 12 or newer.
+1. Use `node --version` to verify you're running Node 12 or newer.
 
-Fork or use this template repository to create a new project.
+2. Fork or use this template repository to create a new project.
 
-Set up the configuration for you project:
+3. Set up the configuration for your project:
 
-- `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
-- `src/_includes/default.liquid` - update `title` for your project
+    - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
+    - `src/_includes/default.liquid` - update `title` for your project
 
-Run this command to build and serve the site:
+4. Install `uswds` and `uswds-compiler`:
 
-``` bash
-npm run start
-```
+    ``` bash
+    npm install uswds --save-dev
+    npm install @uswds/compile --save-dev
+    ```
+
+5. Start the gulp process and have it watch for changes to recompile the styles:
+
+    ``` bash
+    npx gulp watch
+    ```
+
+6. Build and serve the site (will automatically reload when files change):
+
+    ``` bash
+    npm run start
+    ```
 
 ❗❗❗ If this is your first time, the `@11ty/eleventy` package will be installed. Type `y` when prompted to proceed.
 
