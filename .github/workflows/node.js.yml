@@ -25,6 +25,8 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm install --silent
+    - name: Compile USWDS
+      run: npx gulp compile
     - name: Build Site
       run: npm run prod:build
     - name: Check file existence
