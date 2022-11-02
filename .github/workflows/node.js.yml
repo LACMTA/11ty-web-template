@@ -1,7 +1,11 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# This workflow is based on the Node.js CI Workflow
+# This version will checkout the repository and install Node and the project dependencies.
+# It will run the USWDS compiler and run the production build command to generate the 11ty
+# static pages.
+# It will copy the CNAME file to the docs/ folder if necessary, then it will commit and push
+# these changes back to the repository.
 
-name: Node.js CI
+name: Build 11ty-web-template for Production
 
 on:
   pull_request:
