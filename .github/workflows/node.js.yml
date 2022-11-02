@@ -4,25 +4,29 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
-    if: github.repository != 'LACMTA/11ty-web-template'
+    # if: github.repository != 'LACMTA/11ty-web-template'
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+      with: 
+        ref: ${{ github.head_ref }}
     - name: Use Node.js 12.x
       uses: actions/setup-node@v2
       with:
         node-version: 12.x
         cache: 'npm'
+    - name: Install dependencies
+      run: npm install --silent
     - name: Build Site
-      run: npm run clean:build
+      run: npm run prod:build
     - name: Check file existence
       id: check_files
       uses: andstor/file-existence-action@v1
@@ -31,12 +35,7 @@ jobs:
     - name: If CNAME exists then copy CNAME to docs/
       if: steps.check_files.outputs.files_exists == 'true'
       run: cp CNAME docs/
-    - name: List files
-      run: ls -lR
     - name: Commit and push changes
-      run: |
-        git config --global user.name "matikin9"
-        git config --global user.email "matikin9@gmail.com"
-        git add .
-        git commit -am 'Auto clean and build site'
-        git push -f
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: '[Auto] clean and build site for prod'
