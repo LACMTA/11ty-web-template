@@ -4,14 +4,14 @@ Use this template for quick prototypes and simple websites.  This template uses 
 
 ## Quickstart
 
-1. Use `node --version` to verify you're running Node 12 or newer.
+1. Use `node --version` to verify you're running Node 16 or newer.
 
 2. Fork or use this template repository to create a new project.
 
 3. Set up the configuration for your project:
 
     - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
-    - `src/_includes/default.liquid` - update `title` for your project
+    - `src/_includes/default.liquid` - update the `title` for your project
 
 4. Install `uswds`:
 
