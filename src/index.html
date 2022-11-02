@@ -1,22 +1,24 @@
 ---
 layout: default
+title: "11ty web template"
+css: 
+  - '/assets/uswds/css/styles.css'
+  - 'css/site.css'
+js-head: 
+  - '/assets/uswds/js/uswds-init.min.js'
+js-footer:
+  - '/assets/uswds/js/uswds.min.js'
+  - 'js/site.js'
 ---
 
 <div class="usa-section">
 	<div class="grid-container">
-	  <div class="grid-row grid-gap">
-		<main class="
-			usa-layout-docs__main
-			desktop:grid-col-12
-			usa-prose usa-layout-docs
-		  " id="main-content">
-		  <h1>{{ siteTitle }}</h1>
+	  	<div class="grid-row grid-gap">
+			<h1>{{ title }}</h1>
 
-		  <p class="usa-intro">
-			Text here.
-		  </p>
-
-		</main>
-	  </div>
+			<p class="usa-intro">
+				Text here.
+			</p>
+	  	</div>
 	</div>
-  </div>
+</div>

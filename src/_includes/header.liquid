@@ -1,13 +1,26 @@
 <header class="usa-header usa-header--basic">
-	<div class="usa-nav-container">
-	  <div class="usa-navbar">
-		<div class="usa-logo" id="basic-logo">
-		  <em class="usa-logo__text">
-			<a href="https://www.metro.net" title="Metro.net">
-			  Metro
-			</a>
-		  </em>
+	<div class="nav-container">
+		<div class="navbar">
+			<div class="logo" id="-logo">
+				<img src="{{ '/img/metro_logo_white.svg' | url }}" role="img"
+						alt="Metro logo" />
+			</div>
 		</div>
-	  </div>
+		<nav class="header">
+			<div class="button button--header-translate header-bar__translate header-bar__translate--desktop">
+				<div class="header-bar__translate-clickable">
+					<div id="google_translate_element">
+					</div>
+				</div>
+				<div class="header-bar__translate-presentation">
+					<button class="translate-button" aria-expanded="false">
+						<svg class="usa-icon" aria-hidden="true" focusable="false" role="img">
+							<use xlink:href="{{ '/assets/uswds/img/sprite.svg#translate' | url }}"></use>
+						</svg>
+						<span>Translate</span>
+					</button>
+				</div>
+			</div>
+		</nav>
 	</div>
-  </header>
+</header>

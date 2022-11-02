@@ -1,28 +1,38 @@
----
-siteTitle: "11ty"
-css: site.css
-js: site.js
----
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://lacmta.github.io/design-system/dist/css/uswds.min.css" type="text/css">
-	<link rel="stylesheet" href="css/{{ css }}" type="text/css">
 
-	<script src="https://lacmta.github.io/design-system/dist/js/uswds-init.min.js"></script>
-	<title>{{ siteTitle }}</title>
-</head>
+{% include 'head' %}
+
 <body>
-	{% include 'header' %}
-  
-	{{ content }}
-	</main>
+	<div class="container-outer display-flex flex-column">
+		{% include 'header' %}
 
-	<script src="https://lacmta.github.io/design-system/dist/js/uswds.min.js"></script>
-	<script src="js/{{ js }}"></script>
+		<div class="flex-1 display-flex flex-column">
+			{{ content }}
+		</div>
+		{% include 'footer' %}
+	</div>
+
+	
+	{% for file in js-footer %}
+		<script src="{{ file | url }}"></script>
+	{% endfor %}
+
+	<!-- Google Translate -->
+	<script src="{{ '/js/translate.js' | url }}"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement({
+				pageLanguage: 'en',
+				includedLanguages: 'en,es,zh-CN,zh-TW,ko,vi,ja,ru,hy',
+				layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+				autoDisplay: false,
+				gaTrack: true,
+				gaId: 'UA-10002990-1',
+			}, 'google_translate_element');
+		}
+	</script>
+	<script type="text/javascript"
+	src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&amp;ver=1.86"></script>
 </body>
 </html>
