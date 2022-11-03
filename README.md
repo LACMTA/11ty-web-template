@@ -10,8 +10,8 @@ Use this template for quick prototypes and simple websites.  This template uses 
 
 3. Set up the configuration for your project:
 
-    - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
-    - `src/_includes/default.liquid` - update the `title` for your project
+    - `.eleventy.js` - Update `pathPrefix` to your project's folder/repository name. This `pathPrefix` will allow you to run the site via GitHub Pages.
+    - `src/index.html` - Update the `title` for your project in the front matter yaml so your page titles reference your project.
 
 4. Install `uswds`:
 
@@ -31,7 +31,7 @@ Use this template for quick prototypes and simple websites.  This template uses 
     npx gulp watch
     ```
 
-7. Build and serve the site (will automatically reload when files change):
+7. Open a new terminal and run this command to build and serve the site (will automatically reload when files change):
 
     ``` bash
     npm run start
