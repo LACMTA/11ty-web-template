@@ -10,8 +10,8 @@ Use this template for quick prototypes and simple websites.  This template uses 
 
 3. Set up the configuration for your project:
 
-    - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
-    - `src/index.html` - update the `title` for your project in the front matter yaml.
+    - `.eleventy.js` - Update `pathPrefix` to your project's folder/repository name. This `pathPrefix` will allow you to run the site via GitHub Pages.
+    - `src/index.html` - Update the `title` for your project in the front matter yaml so your page titles reference your project.
 
 4. Install `uswds`:
 
