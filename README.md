@@ -12,6 +12,7 @@ Use this template for quick prototypes and simple websites.  This template uses 
 
     - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
     - `src/index.html` - update the `title` for your project in the yml headmatter
+    - `package.json` - update the URLs for the new repository
 
 4. Install `uswds`:
 
