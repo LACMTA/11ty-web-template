@@ -11,7 +11,7 @@ Use this template for quick prototypes and simple websites.  This template uses 
 3. Set up the configuration for your project:
 
     - `.eleventy.js` - update `pathPrefix` to your project's folder/repository name
-    - `src/_includes/default.liquid` - update the `title` for your project
+    - `src/index.html` - update the `title` for your project in the yml headmatter
 
 4. Install `uswds`:
 
